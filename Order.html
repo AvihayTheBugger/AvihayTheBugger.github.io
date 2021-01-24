@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk 2077 Cloths Order</title>
+    
+</head>
+
+<body>
+
+    <button class="button"><a class="font_size_readable" href="index.html">Return to the Main Page</a></button>
+    <br>
+    <br>
+    
+    <hr>
+
+    <form action="https://formspree.io/f/moqpkgzq" method="post">
+
+    <div id="orderNum">
+
+        <label for="orderNum">Order Number: <br></label>
+
+        <input type="text" name="Order ID" value="29760734" disabled>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="firstName">
+
+        <label for="firstName">First Name: <br></label>
+
+
+        <input type="text" name="FirstName" size="20" placeholder="Enter your first name here...">
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="lastName">
+
+        <label for="lastName">Last Name: <br></label>
+
+    
+        <input type="text" name="LastName" size="20" placeholder="Enter your last name here...">
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="clothingType">
+
+        <label for="clothingType">Clothing Type: <br></label>
+
+
+        <input onclick="cTypeSelected=shirtOrUndershirt" type="radio" name="Clothing_Type" id="Shirt" value="10" checked>
+
+        <label for="Shirt">Shirt: Cost: ₪ 10 </label>
+
+    <br>
+
+        <input onclick="cTypeSelected=shirtOrUndershirt" type="radio" name="Clothing_Type" id="Undershirt" value="10">
+
+        <label for="Undershirt">Undershirt: Cost: ₪ 10 </label>
+
+    <br>
+
+        <input onclick="cTypeSelected=sweeter" type="radio" name="Clothing_Type" id="Sweeter" value="20">
+
+        <label for="Sweeter">Sweeter: Cost: ₪ 20 </label>
+
+    <br>
+
+        <input  onclick="cTypeSelected=hoodie" type="radio" name="Clothing_Type" id="Hoodie" value="30">
+
+        <label for="Hoodie">Hoodie: Cost: ₪ 30 </label>
+
+    <br>
+
+        <input  onclick="cTypeSelected=coat" type="radio" name="Clothing_Type" id="Coat" value="50">
+
+        <label for="Coat">Coat: Cost: ₪ 50 </label>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="clothColor">
+
+        <label for="clothColor">Cloth's Color: <br></label>
+
+
+        <select name="Color" id="ColorType">
+
+            <option value="Red">Red </option>
+
+            <option value="Green">Green: Additional Cost: ₪ 5 </option>
+
+            <option value="Blue">Blue: Cost Reduction: ₪ -2 </option>
+
+            <option value="White" selected>White </option>
+
+        </select>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="clothSize">
+
+        <label for="clothSize"> Cloth's Size: <br></label>
+        
+       
+        <input onclick="discPercent=small" type="radio" name="Clothing_Size" id="Small" value="0.9">
+
+        <label for="Small">S: Discount: 10%. </label>
+
+    <br>
+        
+        <input type="radio" name="Clothing_Size" id="Medium" value="1">
+
+        <label for="Medium">M</label>
+
+
+    <br>
+
+        <input type="radio" name="Clothing_Size" id="Large" value="1">
+
+        <label for="Large">L</label>
+
+    <br>
+
+        <input onclick="discPercent=extraLarge" type="radio" name="Clothing_Size" id="Extra Large" value="1.1">
+
+        <label for="Extra Large">XL: Price of Cloth Gets Pricy by 10%. </label>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="logPos">
+
+        <label for="logPos">Logo Position on the clothing: For Every Logo Price Go Up By ₪ 3. <br></label>
+
+        
+        <input onclick="onTheBack=!onTheBack" type="checkbox" name="Back_of-Clothing" id="Pos1">
+
+        <label for="Pos1">On the back</label>
+
+    <br>
+
+        <input onclick="onTheRear=!onTheRear" type="checkbox" name="Rear_of_the_Clothing" id="Pos2">
+
+        <label for="Pos2">On the rear</label>
+
+    <br>
+
+        <input onclick="rightSleeve=!rightSleeve" type="checkbox" name="Right_Sleeve" id="Pos3">
+
+        <label for="Pos3">Right Sleeve</label>
+
+    <br>
+
+        <input onclick="leftSleeve=!leftSleeve" type="checkbox" name="Left_Sleeve" id="Pos4">
+
+        <label for="Pos4">Left Sleeve</label>
+
+    </div>
+
+    <br>
+    <br>
+  
+    <div id="address">
+
+        <label for="address">Address: <br></label>
+
+
+        <textarea name="Address" id="AddressBox" cols="30" rows="10" placeholder="Enter your home address here..."></textarea>
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="amount">
+
+        <label for="amount">Amount: <br></label>
+
+
+        <input type="text" name="Amount" id="Amount" size="25" maxlength="3" value="1" placeholder="Enter the desired amount to order." >
+
+    </div>
+
+    <br>
+    <br>
+
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+    <button type="submit">Submit</button>
+    <button type="reset">Start Over</button>
+    
+    <br>
+    <br>
+
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+    <button type="button" onclick="calculateFinalPrice()">
+        Calculate Total Price
+    </button>
+
+    <br>
+    <br>
+
+    <div id="totalPrice">
+        <p id="p1" style="border: 2cm;">Total Price is: 0</p> 
+    </div>
+
+    </form>
+
+</body>
+
+<script type="text/javascript">
+
+    var total=0;
+        
+    var shirtOrUndershirt=10;
+    var sweeter=20;
+    var hoodie=30;
+    var coat=50;
+
+    var cTypeSelected=shirtOrUndershirt;
+
+    var green=5;
+    var blue=-2;
+
+    var cColorSelected=0;
+
+    var small=0.9;
+    var extraLarge=1.1;
+
+    var discPercent=1;
+
+    var logo=3;
+    var logoAmount=0;
+
+    var onTheBack = false;
+    var onTheRear = false;
+    var rightSleeve = false;
+    var leftSleeve = false;
+
+    
+
+    function calculateFinalPrice() {
+
+        document.getElementById("totalPrice").getElementsByTagName("p")[0].innerHTML="The Total Price is: 0";
+
+        total+=cTypeSelected*discPercent;
+
+        console.log(discPercent,cTypeSelected);
+        console.log(total);
+
+        if(document.getElementById("ColorType").options[1].selected==true) {
+            cColorSelected=green;
+        }
+
+        if(document.getElementById("ColorType").options[2].selected==true) {
+            cColorSelected=blue;
+        }
+        
+        total+=cColorSelected;
+
+        console.log(cColorSelected, total);
+
+        if (onTheBack==true) {
+            logoAmount++
+        }
+
+        if (onTheRear==true) {
+            logoAmount++
+        }
+
+        if (rightSleeve==true) {
+            logoAmount++
+        }
+
+        if (leftSleeve==true) {
+            logoAmount++
+        }
+
+        console.log(onTheBack, onTheRear, rightSleeve, leftSleeve, logoAmount);
+
+        total+=logoAmount*logo;
+
+        console.log(total);
+
+        var amount=parseInt(document.getElementById("Amount").value);
+
+        console.log(amount);
+
+        if(!Number.isInteger(amount)) {
+
+            alert("Amount is not an integer!")
+        }
+
+        else {
+
+            total*=amount;
+            document.getElementById("totalPrice").getElementsByTagName("p")[0].innerHTML="Total Price is: " + total;
+        }
+
+        logoAmount=0;
+        total=0;
+
+    }
+
+
+
+
+</script>
+
+</html>

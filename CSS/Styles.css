@@ -1,0 +1,45 @@
+.Cyberpunk{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    -webkit-text-stroke: 0.28px;
+    -webkit-text-stroke-color:aqua;
+    -webkit-text-fill-color:gold;
+    font-weight: bold;
+}
+
+.font_size_readable{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.font_size_bigger{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.button{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.makeReadable1{
+    background-color: white;
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    font-weight: bolder;
+    -webkit-text-stroke: 1.2px;
+    -webkit-text-stroke-color: black;
+    
+}
